@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
 </head>
 <body>
-    <div th:insert="~{users/menu :: menu}"></div>
+    <div th:insert="~{users/bar :: menu}"></div>
 
-    <table class="pure-table">
+    <table class="pure-table" style="margin-left:auto;margin-right:auto;">
         <thead>
         <tr>
             <td>Name</td>
@@ -18,7 +18,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="user : ${users}">
+        <tr th:each="user : ${users}" align=" center ">
             <td><a th:href="@{/users/{id}(id=${user.getId()})}" th:text="${user.getName()}"></a></td>
             <td th:text="${user.getLastname()}"></td>
             <td th:text="${user.getAge()}"></td>
