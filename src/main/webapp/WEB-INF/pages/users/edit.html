@@ -12,15 +12,21 @@
     <form class="pure-form pure-form-aligned" th:method="patch" th:action="@{/users/{id}(id=${user.getId()})}" th:object="${user}">
         <div class="pure-control-group" align=" center ">
             <label th:for="name">Name:</label>
-            <input type="text" th:field="*{name}" />
+            <label>
+                <input type="text" th:field="*{name}" />
+            </label>
         </div>
         <div class="pure-control-group" align=" center ">
             <label th:for="lastname">Lastname:</label>
-            <input type="text" th:field="*{lastname}" />
+            <label>
+                <input type="text" th:field="*{lastname}" />
+            </label>
         </div>
         <div class="pure-control-group" align=" center ">
             <label th:for="age">Age: </label>
-            <input type="text" th:field="*{age}" />
+            <label>
+                <input type="text" th:field="*{age}" />
+            </label>
         </div>
         <div class="pure-control-group" align=" center ">
             <input class="pure-button pure-button-primary pure-u-1-4" type="submit" value="Update">
